@@ -10,14 +10,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(193, 193, 193, 0.778);
-
+    background-color: white;
 }
 
 #game{
     width: 350px;
     height: 350px;
-    background-color: white;
+    background-color: rgba(135, 217, 244, 0.503);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -26,7 +25,9 @@ body{
 }
 
 .quadrado{
+    background-size: 100%;
     width: 100px;
     height: 100px;
-    background-color: lightblue;
+    background-color: rgba(49, 80, 91, 0.503);
+    overflow: hidden;
 }
