@@ -1,88 +1,68 @@
-let turn = 1
-mark = []
-let check = false
+let isX = 1
+let mark = ["","","","","","","","","",]
 
-var pos1 = document.querySelector ("#pos1").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos2 = document.querySelector ("#pos2").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos3 = document.querySelector ("#pos3").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos4 = document.querySelector ("#pos4").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos5 = document.querySelector ("#pos5").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos6 = document.querySelector ("#pos6").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos7 = document.querySelector ("#pos7").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos8 = document.querySelector ("#pos8").addEventListener("click", function () {
-    insert(this.id)
-});
-
-var pos9 = document.querySelector ("#pos9").addEventListener("click", function () {
-    insert(this.id)
-});
-
-function insert(id){
-    let add = "no"
-
-    for (i=0;i<mark.length;i++){
-        if (mark[i] == id){
-        }
-        else{
-            add = "yes"
-            mark.push(id)
-        }
+function turn(){
+    if (isX % 2 != 0){
+        isX++
+        return true
     }
-
-    console.log(add)
+    else{
+        isX++
+        return false
+    }
 }
 
-/* function insert(id){
-    ok
-    let marked = false
-    marked = false
+function win(){
+    if (mark[0] != "" && mark[3] != "" && mark[6] != ""){
+        return true
+    }
 
-    let element = document.getElementById(id)
+    else if (mark[1] != "" && mark[4] != "" && mark[7] != ""){
+        return true
+    }
     
-    for (i=0;i<9;i++){ // Verificar se já esta marcado
-        marked = false
-        if (id == mark[i]){ //se já esta marcado
-            marked = true 
-        }
-        else{ // se não  esta marcado
-            add(id)
-            mark.push(id)
-        }
+    else if (mark[2] != "" && mark[5] != "" && mark[8] != ""){
+        return true
     }
 
-} */
+    else if (mark[0] != "" && mark[1] != "" && mark[2] != ""){
+        return true
+    }
 
+    else if (mark[3] != "" && mark[4] != "" && mark[5] != ""){
+        return true
+    }
 
+    else if (mark[6] != "" && mark[7] != "" && mark[8] != ""){
+        return true
+    }
 
-/* 
-let element = document.getElementById(id)
+    else if (mark[0] != "" && mark[4] != "" && mark[8] != ""){
+        return true
+    }
 
-if (turn % 2 != 0){
-    element.style = 'background: url("https://img.icons8.com/nolan/344/circled.png");background-repeat: no-repeat;background-size: cover; background-position: center center; border: 3px solid #00000030'
-    turn++
+    else if (mark[6] != "" && mark[4] != "" && mark[2] != ""){
+        return true
+    }
+    else{
+        return false
+    }
 }
-else{
-    element.style = 'background: url("https://img.icons8.com/nolan/344/x.png");background-repeat: no-repeat;background-size: cover; background-position: center center; border: 3px solid #00000030'
-    turn++
-} */
+
+function checked(id){
+    let vez
+    if (mark[id] == ""){vez = turn()}    let element = document.getElementById(id)
+    mark[id] = id
+
+    if (vez == true){
+        element.style = 'background: url("https://img.icons8.com/nolan/344/x.png");background-repeat: no-repeat;background-size: cover; background-position: center center; border: 3px solid #00000030'
+    }
+    if (vez == false){
+        element.style = 'background: url("https://img.icons8.com/nolan/344/circled.png");background-repeat: no-repeat;background-size: cover; background-position: center center; border: 3px solid #00000030'
+    }
+
+    if (win() == true){
+        console.log("GameOver")
+    }
+
+}
