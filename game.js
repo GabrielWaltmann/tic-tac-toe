@@ -88,7 +88,9 @@ function win(){
     }
 }
 
-
+function hide(){
+    message.style = "display: none"
+}
 
 function checked(id){
     let vez
@@ -114,15 +116,15 @@ function checked(id){
         if (winner = "x"){
             message.innerHTML = 
             `<div class="box">
-                <button></button>
+                <button onclick="hide()">X</button>
                 <img src="https://img.icons8.com/nolan/344/x.png" alt="">
                 <h2>ganhou!</h2>
             </div>`
         }
-        if (winner = "o"){
+        else if (winner = "o"){
             message.innerHTML = 
             `<div class="box">
-                <button></button>
+                <button onclick="hide()">X</button>
                 <img src="https://img.icons8.com/nolan/344/circled.png" alt="">
                 <h2>ganhou!</h2>
             </div>`
