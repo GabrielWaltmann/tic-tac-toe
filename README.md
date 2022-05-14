@@ -15,38 +15,33 @@
 
   </tr>
   <tr>
-    <td>38.6%</td>
-    <td>61.4%</td>
-    <td>61.4%</td>
+    <td>20.7%</td>
+    <td>28.8%</td>
+    <td>56.5%</td>
 
   </tr>
 </table>
 
 # Fields <!-- Campos -->
-+ Dog Name
-+ Email
-+ Participar
-+ Slide show
-+ Welcome page
++ Game
 
 <br>
 
 # Features
-- [X] Email fild
-- [ ] Backend
+- [X] Players' position
+- [X] Backend
 - [X] Loyalty
-- [X] Welcome email
-- [X] Animations
+- [X] Restart game
 
 <figure>
-  <img align="center" src="readme/readme2.gif"></img>
+  <img align="center" src="images/preview1.jpg"></img>
 </figure>
 
 <figure>
-  <img align="center" src="readme/readme.gif"></img>
+  <img align="center" src="images/preview2.jpg"></img>
 </figure>
 
-<a align="center" href="https://gabrielwaltmann.github.io/dogclub/" target="_blank">
+<a align="center" href="https://gabrielwaltmann.github.io/tic-tac-toe/" target="_blank">
   <h3 align="center">Test website
 </a>
 

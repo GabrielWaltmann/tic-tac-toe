@@ -113,7 +113,7 @@ function checked(id){
     /* if star played */
     if (nextTime == true){
         element.style = 
-        `background: url("images/star.png");
+        `background: url("images/star.jpg");
         background-repeat: no-repeat;
         background-size: 80%;
         background-position: center center; 
@@ -122,7 +122,7 @@ function checked(id){
 
     /* if diamond played */
     if (nextTime == false){
-        element.style = `background: url("images/diamond.png");
+        element.style = `background: url("images/diamond.jpg");
         background-repeat: no-repeat;
         background-size: 80%; 
         background-position: center center; 
