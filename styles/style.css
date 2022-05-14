@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+/* Global */
 *{
     margin: 0;
     padding: 0;
@@ -11,15 +12,16 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #09082F;
 }
 
-#game{
+/* squares */
+#squares{
     width: 350px;
     height: 350px;
-    background-color: rgba(135, 217, 244, 0.503);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -27,14 +29,17 @@ body{
     align-items: center;
 }
 
-.quadrado{
-    background-size: 100%;
+/* each square */
+.square{
+    box-shadow: 0px 0px 12px 0px #5F25A1;
+    border-radius: 10px;
     width: 100px;
     height: 100px;
-    background-color: rgba(49, 80, 91, 0.503);
-    overflow: hidden;
+    background-color: #07072B;
+    cursor: pointer;
 }
 
+/* result */
 #message{
     position: absolute;
     height: 100vh;
@@ -49,24 +54,44 @@ body{
     flex-direction: column;
 }
 
+/* box with the result */
 .box{
-    background-color: white;
+    background: #07072b89;
+    box-shadow: -1px 6px 32px 0 #1e1eb689;
+    backdrop-filter: blur( 0px );
+    border-radius: 10px;
     text-align: center;
+    height: 50vh;
+    width: 50vw;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem
+
 }
 
-img {
-    height: 300px;
-    width: 300px;
+/* box img */
+.box img {
+    height: 200px;
+    width: 200px;
 }
 
-button{
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    border: none;
-    transform: translate(50%, 50%);
+/* images */
+img{
+    height: 100px;
+    width: 100px;
 }
 
-button:hover{
-    cursor: pointer
+/* restart game */
+#reset{
+    margin-top: 30px;
+    height: 80px;
+    width: 80px;
+}
+
+/* restart game over */
+#reset:hover{
+    cursor: pointer;
 }

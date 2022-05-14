@@ -6,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles/style.css"> 
+    <link rel="shortcut icon" href="https://img.icons8.com/external-flat-icons-inmotus-design/344/external-game-games-flat-icons-inmotus-design.png" type="image/x-icon">
 </head>
 <body>
-    <div id="game">
-        <div class="quadrado" id="0" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="1" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="2" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="3" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="4" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="5" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="6" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="7" onclick="checked(this.id)"></div>
-        <div class="quadrado" id="8" onclick="checked(this.id)"></div>
+    <!-- Title -->
+    <h1>Tic Tac toe</h1>
+    <!-- Squeres -->
+    <div id="squares"> 
+        <div class="square" id="0" onclick="checked(this.id)"></div>
+        <div class="square" id="1" onclick="checked(this.id)"></div>
+        <div class="square" id="2" onclick="checked(this.id)"></div>
+        <div class="square" id="3" onclick="checked(this.id)"></div>
+        <div class="square" id="4" onclick="checked(this.id)"></div>
+        <div class="square" id="5" onclick="checked(this.id)"></div>
+        <div class="square" id="6" onclick="checked(this.id)"></div>
+        <div class="square" id="7" onclick="checked(this.id)"></div>
+        <div class="square" id="8" onclick="checked(this.id)"></div>
     </div>
 
-    <div id="message" ><h2></h2></div>
+    <!-- result -->
+    <div id="message" ></div>
 
+    <!-- game script -->
     <script src="game.js"></script>
+
+    <!-- icons script -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
